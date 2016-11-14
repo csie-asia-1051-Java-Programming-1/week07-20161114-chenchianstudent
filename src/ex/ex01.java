@@ -10,21 +10,31 @@ public class ex01 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 Scanner scn=new Scanner(System.in);
-System.out.print("½Ð¿é¤Jn");
-int n=scn.nextInt();
-var(n);
+var(scn.nextInt());
 			}
-public static void var(int n){
+public static double var(int n){
 Scanner scn=new Scanner(System.in);
-int a=0;
 int data[]=new int[n];
-for(int i=0;i<=data.length;i++){
-int num=scn.nextInt();
-data[i]=num;
-a++;
+float us=0;
+float sum=0;
+for(int i=0;i<n;i++){
+	int num=scn.nextInt();
+	data[i]=num;
 }
-
-		}
+for(int i=0;i<n;i++){
+us+=data[i];	
+}
+float u=(float)us/n;
+for(int i=0;i<n;i++){
+data[i]=(int)((data[i]-u)*(data[i]-u));
+}
+for(int i=0;i<n;i++){
+	sum+=data[i];
+}
+float ans=(float)sum/n;
+System.out.print(ans);
+return ans;
+}
 	}
 
 
