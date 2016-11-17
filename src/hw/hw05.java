@@ -8,16 +8,15 @@ public class hw05 {
 		// TODO Auto-generated method stub
 Scanner scn=new Scanner(System.in);
 System.out.print("請輸入一長整數");
-long n=scn.nextLong();
+String n=scn.next();
 
 fun1(n);
 	}
-public static void fun1(long v1){
-	if(v1!=0){
-		
-	fun1(v1%10);
-	}else{
-	
-	}
+public static void fun1(String n){
+	Scanner scn=new Scanner(System.in);
+	char data[]=n.toCharArray();
+	for(int i=data.length-1;i>=0;i--){
+	System.out.print(data[i]);
+}
 }
 }
